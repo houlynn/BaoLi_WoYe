@@ -47,7 +47,7 @@ Ext.define('app.view.main.region.Top', {
 					}*/, ' ', ' ', {
 						text : '首页',
 						glyph : 0xf015,
-						//handler : 'onHomePageButtonClick'
+						handler : 'onHomePageButtonClick'
 					}/*, {
 						xtype : 'settingmenu'
 					}*/, {
@@ -100,7 +100,7 @@ Ext.define('app.view.main.region.Top', {
 						glyph : 0xf011
 					}, {
 						glyph : 0xf102,
-					//	handler : 'hiddenTopBottom',
+						handler : 'hiddenTopBottom',
 						tooltip : '隐藏顶部和底部区域',
 						disableMouseOver : true
 					}]
