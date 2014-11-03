@@ -1,4 +1,4 @@
-Ext.define("core.app.base.BaseGrid",{
+Ext.define("app.base.BaseGrid",{
 	extend:"Ext.grid.Panel",
 	alias:"widget.basegrid",
 	border:false, 

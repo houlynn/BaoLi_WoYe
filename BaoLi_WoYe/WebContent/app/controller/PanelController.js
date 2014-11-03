@@ -1,7 +1,7 @@
 /**
  * 表单控制器
  */
-Ext.define("core.app.controller.PanelController",{
+Ext.define("app.controller.PanelController",{
 	extend:"Ext.app.Controller",
 	initPanel:function(){
 		var self=this;

@@ -1,21 +1,21 @@
 /**
  * 程序主控制器
  */
-Ext.define("core.app.controller.MainController",{
+Ext.define("app.controller.MainController",{
 	extend:"Ext.app.Controller",
 	mixins: {
-		btnCtr:"core.app.controller.ButtonController",
-		formCtr:"core.app.controller.FormController",
-		gridCtr:"core.app.controller.GridController",
-		panelCtr:"core.app.controller.PanelController",
-		queryCtr:"core.app.controller.QueryController",
-		gridActionUtil:"core.util.GridActionUtil",
-		suppleUtil:"core.util.SuppleUtil",
-		messageUtil:"core.util.MessageUtil",
-		formUtil:"core.util.FormUtil",
-		sqlUtil:"core.util.SqlUtil",
-		queryUtil:"core.util.QueryUtil",
-		menuUtils:"core.util.MenuUtil"
+		btnCtr:"app.controller.ButtonController",
+		formCtr:"app.controller.FormController",
+		gridCtr:"app.controller.GridController",
+		panelCtr:"app.controller.PanelController",
+		queryCtr:"app.controller.QueryController",
+		gridActionUtil:"app.util.GridActionUtil",
+		suppleUtil:"app.util.SuppleUtil",
+		messageUtil:"app.util.MessageUtil",
+		formUtil:"app.util.FormUtil",
+		sqlUtil:"app.util.SqlUtil",
+		queryUtil:"app.util.QueryUtil",
+		menuUtils:"app.util.MenuUtil"
 	},
 	ctr:{},
 	init:function(){
@@ -30,10 +30,10 @@ Ext.define("core.app.controller.MainController",{
 		this.control(self.ctr);
 	},
 	views:[
-		"core.app.base.BaseGrid",
-		"core.app.base.BaseForm",
-		"core.app.base.BasePanel",
-		"core.app.base.BaseQueryPanel",
-		"core.app.base.BaseCenterPanel"
+		"app.base.BaseGrid",
+		"app.base.BaseForm",
+		"app.base.BasePanel",
+		"app.base.BaseQueryPanel",
+		"app.base.BaseCenterPanel"
 		]
 });

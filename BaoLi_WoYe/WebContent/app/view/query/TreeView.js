@@ -1,4 +1,4 @@
-Ext.define('core.app.view.query.TreeView',{
+Ext.define('app.view.query.TreeView',{
  	extend: 'Ext.tree.Panel',
 	frame : true,
 	animCollapse : false,
@@ -10,7 +10,7 @@ Ext.define('core.app.view.query.TreeView',{
 	autoScroll : true,
 	animate : true,
 	initComponent: function(){
-	  	this.store=Ext.create("core.app.store.query.TreeStore",{
+	  	this.store=Ext.create("app.store.query.TreeStore",{
 	   		url:this.url
 	   });
 	   var params=this.store.getProxy().extraParams;	   

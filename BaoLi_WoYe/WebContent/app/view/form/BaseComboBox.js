@@ -1,4 +1,4 @@
-Ext.define("core.app.view.form.BaseComboBox",{
+Ext.define("app.view.form.BaseComboBox",{
 	extend:"Ext.form.field.ComboBox",
 	alias: 'widget.basecombobox',
 	queryMode: 'local',

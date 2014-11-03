@@ -1,4 +1,4 @@
-Ext.define("core.app.view.query.FormWindow", {
+Ext.define("app.view.query.FormWindow", {
 	extend : "Ext.window.Window",
 	
 	maximizable : true,

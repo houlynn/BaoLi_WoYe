@@ -1,4 +1,4 @@
-Ext.define("core.app.base.BaseQueryPanel",{
+Ext.define("app.base.BaseQueryPanel",{
 extend : 'Ext.form.Panel',
 alias : 'widget.basequerypanel',
 layout:"column",

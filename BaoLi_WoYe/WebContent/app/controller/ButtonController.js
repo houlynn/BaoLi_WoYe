@@ -1,7 +1,7 @@
 /**
  * 程序主控制器
  */
-Ext.define("core.app.controller.ButtonController",{
+Ext.define("app.controller.ButtonController",{
 	extend:"Ext.app.Controller",
 	initBtn:function(){
 		var self=this;

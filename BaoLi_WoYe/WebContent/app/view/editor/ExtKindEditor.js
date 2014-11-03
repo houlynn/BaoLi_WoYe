@@ -1,4 +1,4 @@
-Ext.define("core.app.view.editor.ExtKindEditor",{
+Ext.define("app.view.editor.ExtKindEditor",{
 		extend : 'Ext.form.field.TextArea',
 		alias : 'widget.extkindeditor',
 		initComponent : function() {

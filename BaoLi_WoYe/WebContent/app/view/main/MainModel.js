@@ -3,9 +3,7 @@
  */
 Ext.define('app.view.main.MainModel', {
 			extend : 'Ext.app.ViewModel',
-
 			alias : 'viewmodel.main',
-
 			constructor : function() {
 				Ext.log('MainModel constructor');
 				var me = this;
@@ -23,38 +21,22 @@ Ext.define('app.view.main.MainModel', {
 								Ext.apply(me.data, applicationInfo);
 							}
 						});
+				this.initMenu(this);
 			},
-
 			data : {
-
-				monetary : { // 金额单位
-					value : 'tenthousand' // 默认万元，以后可以从后台取得个人偏好设置，或者存放在cookies中
-				},
-
-				monetaryposition : { // 金额单位放置位置
-					value : 'behindnumber'
-				},
-
-				autocolumnmode : { // 列宽自动调整
-					value : 'onlyfirstload' // 列宽自动调整,默认第一次加载到数据
-				},
-
 				name : 'app',
-
 				// 系统信息
 				system : {
 					name : '工程项目合同及资金管理系统',
 					version : '5.2014.06.60',
 					iconUrl : ''
 				},
-
 				// 用户单位信息和用户信息
 				user : {
 					company : '武当太极公司',
 					department : '工程部',
 					name : '张三丰'
 				},
-
 				// 服务单位和服务人员信息
 				service : {
 					company : '无锡熙旺公司',
@@ -64,11 +46,6 @@ Ext.define('app.view.main.MainModel', {
 					email : 'jfok1972@qq.com',
 					copyright : '熙旺公司'
 				},
-
-				menuType : {
-					value : 'toolbar'
-				}, // 菜单的位置，'button' , 'toolbar' , 'tree'
-
 				// 系统菜单的定义，这个菜单可以是从后台通过ajax传过来的
 				systemMenu : [{
 							text : '工程管理', // 菜单项的名称
@@ -168,7 +145,40 @@ Ext.define('app.view.main.MainModel', {
 						})
 				return result;
 			},
-
+           getSystemStore:function(){
+        	   var menuTreeStore=comm.get("menuTreeStore");
+        	   return menuTreeStore;
+           },
+        initMenu:function(self){
+    		var data=self.ajax({url:"/rbacPermission/getAuthorMenuTree.action",params:{excludes:"checked"}});
+    		var menuTreeStore=Ext.create("Ext.data.TreeStore",{
+    			model:factory.ModelFactory.getModelByName("com.ufo.framework.system.model.ui.JSONTreeNode","checked").modelName,
+    			defaultRootId:"ROOT",
+    			root:{
+    				text:"ROOT",
+    				code:"ROOT",
+    				children:data
+    			}
+    		});
+    		comm.add("menuTreeStore",menuTreeStore);
+    	},
+    	ajax:function(config){
+    		var data={};
+    		var request={
+    			method:"POST",
+    			async:false,
+    			success:function(response){
+    				data = 	Ext.decode(response.responseText, true);
+    			},
+    			failure : function(response){
+    		    	alert('数据请求出错了！！！！\n错误信息：\n'+response.responseText);
+    		    }
+    		};
+    		var request=Ext.apply(request,config);
+    		Ext.Ajax.request(request);
+    		return data;		
+    	},
+    	
 			// 根据data.tf_MenuGroups生成菜单条和菜单按钮下面使用的菜单数据
 			getMenus : function() {
 				var items = [], me = this;

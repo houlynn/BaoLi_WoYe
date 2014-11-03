@@ -35,6 +35,7 @@ public class Menu extends TreeBaseEntity {
 	private String bigIcon;
 	@NodeType(type=TreeNodeType.PARENT)
 	private Menu parent;
+	private  int orderIndex;
 	private Set<Menu> children=new HashSet<Menu>();
 	@Id
 	@GeneratedValue(generator="systemUUID")
@@ -86,6 +87,12 @@ public class Menu extends TreeBaseEntity {
 	}
 	public void setChildren(Set<Menu> children) {
 		this.children = children;
+	}
+	public int getOrderIndex() {
+		return orderIndex;
+	}
+	public void setOrderIndex(int orderIndex) {
+		this.orderIndex = orderIndex;
 	}
 
 	

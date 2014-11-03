@@ -9,8 +9,8 @@ Ext.tip.QuickTipManager.init();
 Ext.Loader.setConfig({
 	enabled:true,
 	paths:{
-		baseUx:"core/ux/base",
-		factory:"core/coreApp/util/factory"
+		baseUx:"app/ux/base",
+		factory:"app/util/factory",
 	}
 })
 //同步加载

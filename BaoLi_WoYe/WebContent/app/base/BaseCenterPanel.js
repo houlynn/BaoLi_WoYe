@@ -1,4 +1,4 @@
-Ext.define("core.app.base.BaseCenterPanel",{
+Ext.define("app.base.BaseCenterPanel",{
 extend : 'Ext.container.Container',
 alias : 'widget.basecenterpanel',
 layout:"border",

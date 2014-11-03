@@ -1,4 +1,4 @@
-Ext.define("core.app.view.form.BaseQueryLoad",{
+Ext.define("app.view.form.BaseQueryLoad",{
 	extend:"Ext.form.TwinTriggerField",
 	alias: 'widget.basequeryLoad',
 	/*initComponent : function(){

@@ -1,7 +1,7 @@
 /**
  * 表单控制器
  */
-Ext.define("core.app.controller.FormController",{
+Ext.define("app.controller.FormController",{
 	extend:"Ext.app.Controller",
 	initForm:function(){
 		var self=this;
@@ -20,9 +20,9 @@ Ext.define("core.app.controller.FormController",{
 		Ext.apply(self.ctr,formCtr);
 	},
 	views:[
-		"core.app.view.form.BaseComboBox",
-		"core.app.view.form.BaseQueryField",
-		"core.app.view.form.BaseQueryLoad",
-		 "core.app.view.form.ComboBoxTree"
+		"app.view.form.BaseComboBox",
+		"app.view.form.BaseQueryField",
+		"app.view.form.BaseQueryLoad",
+		 "app.view.form.ComboBoxTree"
 	]
 });

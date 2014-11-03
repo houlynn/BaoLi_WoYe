@@ -1,4 +1,4 @@
-Ext.define("core.app.view.form.BaseQueryField",{
+Ext.define("app.view.form.BaseQueryField",{
 	extend:"Ext.form.FieldContainer",
 	alias: 'widget.basequeryfield',
 	layout:"hbox",

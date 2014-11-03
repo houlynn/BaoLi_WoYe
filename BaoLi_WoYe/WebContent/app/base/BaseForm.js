@@ -1,4 +1,4 @@
-Ext.define("core.app.base.BaseForm",{
+Ext.define("app.base.BaseForm",{
 	extend:"Ext.form.Panel",
 	alias:"widget.baseform",
 	frame:false,

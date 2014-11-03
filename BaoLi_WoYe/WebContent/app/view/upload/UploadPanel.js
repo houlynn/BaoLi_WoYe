@@ -2,7 +2,7 @@
  * 上传组件
  */
 
-Ext.define('core.app.view.upload.UploadDialog',{
+Ext.define('app.view.upload.UploadDialog',{
 	extend : 'Ext.grid.Panel',
 	alias : 'widget.uploadpanel',
 	width : 700,

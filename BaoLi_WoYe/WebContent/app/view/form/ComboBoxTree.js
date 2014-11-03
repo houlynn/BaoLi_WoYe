@@ -8,7 +8,7 @@ Ext.ns('Ext.ux.form');
 
 Ext
 		.define(
-				"core.app.view.form.ComboBoxTree",
+				"app.view.form.ComboBoxTree",
 				{
 					extend : "Ext.form.TwinTriggerField",
 					alias : "'widget.xcomboboxtree",

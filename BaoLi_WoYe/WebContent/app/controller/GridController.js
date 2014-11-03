@@ -1,7 +1,7 @@
 /**
  * 表格控制器
  */
-Ext.define("core.app.controller.GridController",{
+Ext.define("app.controller.GridController",{
 	extend:"Ext.app.Controller",
 	initGrid:function(){
 		var self=this;

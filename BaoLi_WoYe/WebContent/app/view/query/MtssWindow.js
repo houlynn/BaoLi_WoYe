@@ -1,4 +1,4 @@
-Ext.define("core.app.view.query.MtssWindow",{
+Ext.define("app.view.query.MtssWindow",{
 	extend:"Ext.window.Window",
 	modal:true,
 	maximizable:true,

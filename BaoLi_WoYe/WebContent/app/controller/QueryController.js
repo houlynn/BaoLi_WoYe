@@ -1,7 +1,7 @@
 /**
  * 查询组件控制器
  */
-Ext.define("core.app.controller.QueryController",{
+Ext.define("app.controller.QueryController",{
 	extend:"Ext.app.Controller",
 	initQuery:function(){
 		var self=this;
@@ -165,12 +165,12 @@ Ext.define("core.app.controller.QueryController",{
 		Ext.apply(self.ctr,queryCtr);
 	},
 	views:[
-		"core.app.view.query.MtssWindow",
-		"core.app.view.query.TreeView",
-		"core.app.view.query.GridWindow",
+		"app.view.query.MtssWindow",
+		"app.view.query.TreeView",
+		"app.view.query.GridWindow",
 		
 		],
 	stores:[
-		"core.app.store.query.TreeStore"
+		"app.store.query.TreeStore"
 	]
 });

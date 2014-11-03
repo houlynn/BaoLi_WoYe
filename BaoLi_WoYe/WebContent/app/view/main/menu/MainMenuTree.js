@@ -23,16 +23,24 @@ Ext.define('app.view.main.menu.MainMenuTree', {
 			rootVisible : false,
 			lines : false,
 			initComponent : function() {
-				this.store = Ext.create('Ext.data.TreeStore', {
+				/*this.store = Ext.create('Ext.data.TreeStore', {
 							root : {
 								text : '系统菜单',
 								leaf : false,
 								expanded : true
 							}
-						});
-				var vm = this.up('app-main').getViewModel()
-				var menus = vm.get('tf_MenuGroups');
-				var root = this.store.getRootNode();
+						});*/
+				var vm = this.up('app-main').getViewModel();
+				var menuStore=vm.getSystemStore();
+				console.log(menuStore);
+				this.store=menuStore;
+				
+			//	var menus = vm.get('tf_MenuGroups');
+				
+				
+				
+				
+		/*		var root = this.store.getRootNode();
 				for (var i in menus) {
 					var menugroup = menus[i];
 					var menuitem = root.appendChild({
@@ -56,7 +64,7 @@ Ext.define('app.view.main.menu.MainMenuTree', {
 							menuitem.appendChild(childnode);
 						}
 					}
-				}
+				}*/
 				this.callParent(arguments);
 			}
 		})

@@ -1,4 +1,4 @@
-Ext.define("core.app.store.query.TreeStore",{
+Ext.define("app.store.query.TreeStore",{
 	extend:"Ext.data.TreeStore",
 	defaultRootId:"ROOT",
 	model:factory.ModelFactory.getModelByName("org.yingqu.framework.model.vo.JSONTreeNode","checked").modelName,
