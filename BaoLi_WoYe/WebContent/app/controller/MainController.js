@@ -3,7 +3,7 @@
  */
 Ext.define("app.controller.MainController",{
 	extend:"Ext.app.Controller",
-	mixins: {
+	/*mixins: {
 		btnCtr:"app.controller.ButtonController",
 		formCtr:"app.controller.FormController",
 		gridCtr:"app.controller.GridController",
@@ -21,6 +21,8 @@ Ext.define("app.controller.MainController",{
 	init:function(){
 		var self=this;
 		coreApp=self;
+		console.log("======controller ini ====================");
+		console.log(coreApp);
 		self.initBtn();
 		self.initForm();
 		self.initGrid();
@@ -35,5 +37,5 @@ Ext.define("app.controller.MainController",{
 		"app.base.BasePanel",
 		"app.base.BaseQueryPanel",
 		"app.base.BaseCenterPanel"
-		]
+		]*/
 });

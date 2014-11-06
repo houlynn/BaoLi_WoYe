@@ -9,7 +9,7 @@ Ext.define("core.util.MenuUtil",{
 		var self=this;
 		var data=self.ajax({url:"/rbacPermission/getAuthorMenuTree.action",params:{excludes:"checked"}});
 		var menuTreeStore=Ext.create("Ext.data.TreeStore",{
-			model:factory.ModelFactory.getModelByName("org.yingqu.framework.model.vo.JSONTreeNode","checked").modelName,
+			model:factory.ModelFactory.getModelByName("com.ufo.framework.system.model.ui.JSONTreeNode","checked").modelName,
 			defaultRootId:"ROOT",
 			root:{
 				text:"ROOT",
@@ -79,7 +79,7 @@ Ext.define("core.util.MenuUtil",{
 						loadingText : "正在加载..."
 					},
 					store : Ext.create("Ext.data.TreeStore",{
-						model:factory.ModelFactory.getModelByName("org.yingqu.framework.model.vo.JSONTreeNode","checked").modelName,
+						model:factory.ModelFactory.getModelByName("com.ufo.framework.system.model.ui.JSONTreeNode","checked").modelName,
 						defaultRootId:"ROOT",
 						root:{
 							text:"ROOT",

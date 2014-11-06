@@ -1,7 +1,7 @@
 Ext.define("core.app.store.query.TreeStore",{
 	extend:"Ext.data.TreeStore",
 	defaultRootId:"ROOT",
-	model:factory.ModelFactory.getModelByName("org.yingqu.framework.model.vo.JSONTreeNode","checked").modelName,
+	model:factory.ModelFactory.getModelByName("com.ufo.framework.system.model.ui.JSONTreeNode","checked").modelName,
 	constructor: function(config) {
 		this.proxy=Ext.create("Ext.data.proxy.Ajax",{
 			url:config.url,

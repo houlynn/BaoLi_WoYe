@@ -14,10 +14,10 @@ import com.ufo.framework.common.core.ext.NodeType;
 import com.ufo.framework.common.core.utils.StringUtil;
 import com.ufo.framework.common.model.Model;
 /**
- * 部门Action
-* @author 作者 yingqu: 
-* @version 创建时间：2014年6月21日 下午11:49:45 
-* version 1.0
+ * 
+* @author HouLynn
+* @date 2014年11月6日
+  @version 1.0
  */
 @Controller("deptAction")
 @RequestMapping("/rbacDept")

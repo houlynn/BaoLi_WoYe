@@ -107,5 +107,37 @@ Ext.define('app.view.main.MainController', {
 			// 显示顶部的按钮菜单,隐藏菜单条和左边菜单区域。
 			showButtonMenu : function(button) {
 				this.getView().getViewModel().set('menuType.value', 'button');
-			}
+			},
+			 menItemClick: function (view, node, item, index, e, eOpts){
+					var maincenter = this.getView().down('maincenter');
+					var nodeInfo=node.get("nodeInfo");
+		        	var config=nodeInfo.split(",");
+		            var controller=coreApp.getController(config[1]);
+					if(!controller.inited){
+					 controller.init();
+					 controller.inited=true
+					}
+				    var  addPanel=tab.getComponent(node.data.id);
+				     if(addPanel){
+				    	return;
+				     }
+					var tab=  Ext.create('Ext.container.Container', {
+					            layout: 'fit',
+					            title : node.data.text,
+					            frame:true,
+								closable : true,
+								border:false,
+								id:node.data.id,
+								iconCls : 'icon-activity',
+					              items: [
+					                 {
+					                     xtype: config[0],
+					                 }
+					             ] 
+					         });
+					 
+					maincenter.setActiveTab(maincenter.add(panel));
+								
+			 }
+			
 		});
